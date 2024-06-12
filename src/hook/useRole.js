@@ -13,7 +13,7 @@ const useRole = () => {
       return data.role
     },
   })
-
+ // jfd
   //   Fetch user info using logged in user email
 
   return [role, isLoading]
