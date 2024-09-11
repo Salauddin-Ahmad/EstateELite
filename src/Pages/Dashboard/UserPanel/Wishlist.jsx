@@ -8,7 +8,7 @@ const Wishlist = () => {
   const axiosSecure = useAxiosSecure();
 
   const { data: wishlisted } = useQuery({
-    queryKey: "wishlist",
+    queryKey: ["wishlist"],
     queryFn: async () => {
       const res = await axiosSecure.get(`/wishlist/${user.email}`);
       console.log(res.data);

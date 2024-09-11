@@ -72,6 +72,8 @@ const AllUsers = () => {
     });
   };
 
+  const handleMarkAsFraud = (user) => {
+  }
   return (
     <div>
       <div className="flex justify-evenly my-4">
@@ -99,7 +101,14 @@ const AllUsers = () => {
                 <td>{user.email}</td>
                 <td>
                   {user.role === "admin" ? (
-                    "Admin"
+                    <>
+                      <button
+                        onClick={() => handleMarkAsFraud(user)}
+                        className="btn btn-lg bg-yellow-400 ml-2"
+                      >
+                        Mark as Fraud
+                      </button>
+                    </>
                   ) : user.role === "agent" ? (
                     "Agent"
                   ) : (
