@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+body {
+    /* background: url('your-image-url.jpg') no-repeat center center fixed; Image background */
+    background-size: cover; /* Ensures the image covers the entire screen */
+    background-color:  #C2D9DD; /* Fallback background color */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    min-height: 100vh; /* Ensures the body is at least the height of the viewport */
+  }
+  
