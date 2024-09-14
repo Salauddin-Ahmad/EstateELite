@@ -87,11 +87,6 @@ Welcome to EstateElite, a real estate platform designed to streamline the buying
 3. Set up environment variables for Firebase and MongoDB.
 4. Run `npm start` to start the development server.
 
-## Future Enhancements
-
-- **Payment Integration**:
-  - Integrate a payment gateway for processing transactions.
-
 ## Contribution Guidelines
 
 1. Fork the repository.
