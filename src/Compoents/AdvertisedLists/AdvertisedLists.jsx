@@ -28,7 +28,7 @@ const AdvertisedLists = () => {
 
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
       {properties?.map(property => (
-        <div key={property._id} className="card border  border-slate-300 bg-slate-100 ">
+        <div key={property._id} className="card bg-[rgba(0,66,116,.3)] backdrop-blur-2xl shadow-lg ">
           <img 
           className="rounded-t-xl w-auto h-40"
           src={property.propertyImage}
