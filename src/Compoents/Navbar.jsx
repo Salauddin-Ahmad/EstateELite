@@ -56,7 +56,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="navbar  bg-white [#C2D9DD] shadow-xl  mx-auto fixed ">
+    <div className="navbar   bg-[rgba(0,66,116,.9)] [#C2D9DD] shadow-xl  mx-auto fixed z-50">
       <div className="flex-1">
         <div className="dropdown relative">
           <div tabIndex={0} role="button" className="btn btn-ghost ">

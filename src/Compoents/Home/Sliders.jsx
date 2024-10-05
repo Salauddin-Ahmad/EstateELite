@@ -4,9 +4,8 @@ import "swiper/swiper-bundle.css";
 
 const Sliders = () => {
   return (
-    <div className="mb-5">
-
-
+    <div className="mb-5" style={{ paddingTop: "70px" }}>
+ 
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, Autoplay]}
         spaceBetween={50}
