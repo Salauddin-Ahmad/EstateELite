@@ -24,7 +24,7 @@ const Sliders = () => {
             alt=""
             style={{
               width: "100%",
-              height: "80vh",
+              height: "90vh",
               marginTop: "20px",
               borderRadius: "5px"
             }}
@@ -36,7 +36,7 @@ const Sliders = () => {
             alt=""
             style={{
               width: "100%",
-              height: "80vh",
+              height: "90vh",
               marginTop: "20px",
               borderRadius: "5px"
             }}
@@ -48,7 +48,7 @@ const Sliders = () => {
             alt=""
             style={{
               width: "100%",
-              height: "80vh",
+              height: "90vh",
               marginTop: "20px",
               borderRadius: "5px"
             }}
@@ -60,7 +60,7 @@ const Sliders = () => {
             alt=""
             style={{
               width: "100%",
-              height: "80vh",
+              height: "90vh",
               marginTop: "20px",
               borderRadius: "2px"
             }}
@@ -72,7 +72,7 @@ const Sliders = () => {
             alt=""
             style={{
               width: "100%",
-              height: "80vh",
+              height: "90vh",
               marginTop: "20px",
               borderRadius: "2px"
             }}
