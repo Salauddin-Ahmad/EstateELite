@@ -4,7 +4,7 @@ import "swiper/swiper-bundle.css";
 
 const Sliders = () => {
   return (
-    <div className="mb-5"  style={{ paddingTop: "70px"}}>
+    <div className="mb-5 mt-[2px]">
  
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, Autoplay]}

@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import useAuth from "../../hook/useAuth";
 import useAxiosSecure from "../../hook/useAxiosSecure";
 import { Link } from "react-router-dom";
-
+import { MdMyLocation } from "react-icons/md";
 const AdvertisedLists = () => {
   const axiosSecure = useAxiosSecure();
   const { user } = useAuth();
@@ -35,7 +35,8 @@ const AdvertisedLists = () => {
            alt={property.title} />
           <div className="p-3">
             <h2 className="font-bold text-xl">{property.title}</h2>
-            <p><span className="font-semibold">Location: </span>{property.location}</p>
+            <p><span className="font-semibold flex ">Location:
+            <MdMyLocation />  </span>{property.location}</p>
             <p><span className="font-semibold">Price range: </span>${property.priceRangeMin} - ${property.priceRangeMax}</p>
             <p><span className="font-semibold">Status: </span>{property.verificationStatus}</p>
             <Link to={`/property/${property._id}`}>

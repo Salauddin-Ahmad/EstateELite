@@ -8,8 +8,10 @@ const Root = () => {
              <div className="">
              <Navbar></Navbar>
              </div>
+            <div className="pt-[70px]">
             <Outlet></Outlet>
          
+            </div>
             <Footer></Footer>
         </div>
     );

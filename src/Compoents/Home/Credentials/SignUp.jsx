@@ -153,22 +153,22 @@ const SignUp = () => {
               </div>
 
               <div className="mt-2">
-  <label className="block mb-2 text-sm font-medium text-gray-600" htmlFor="password">Password</label>
-  <input
-    id="password"
-    className="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md focus:border-blue-400 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
-    type="password"
-    {...register("password", {
-      required: "Password is required",
-      minLength: { value: 8, message: "Password must be at least 8 characters" },
-      pattern: {
-        value: /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
-        message: "Password must contain at least one letter, one number, and one special character"
-      }
-    })}
-  />
-  {errors.password && <p className="text-red-600">{errors.password.message}</p>}
-</div>
+                <label className="block mb-2 text-sm font-medium text-gray-600" htmlFor="password">Password</label>
+                <input
+                  id="password"
+                  className="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md focus:border-blue-400 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
+                  type="password"
+                  {...register("password", {
+                    required: "Password is required",
+                    minLength: { value: 8, message: "Password must be at least 8 characters" },
+                    pattern: {
+                      value: /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
+                      message: "Password must contain at least one letter, one number, and one special character"
+                    }
+                  })}
+                />
+                {errors.password && <p className="text-red-600">{errors.password.message}</p>}
+              </div>
 
 
               <div className="mt-2">
@@ -182,9 +182,10 @@ const SignUp = () => {
                 {errors.image && <p className="text-red-600">{errors.image.message}</p>}
               </div>
               <div className="mt-6">
-                <button className="w-full px-4 py-2 text-white bg-blue-700 rounded hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Sign Up</button>
+                <button className="w-full px-4 py-2 text-white bg-blue-600 rounded hover:bg-blue-600 focus:outline-none focus:bg-blue-300">Sign Up</button>
               </div>
             </form>
+            
             <div className="flex items-center justify-between mt-4">
               <span className="w-1/5 border-b md:w-1/4"></span>
               <Link to="/login" className="text-xs text-gray-500 uppercase hover:underline">or sign in</Link>
