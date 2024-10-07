@@ -7,7 +7,7 @@ body {
   /* background: url('your-image-url.jpg') no-repeat center center fixed; Image background */
   background-size: cover;
   /* Ensures the image covers the entire screen */
-  background: linear-gradient(135deg, #ff00bf5c ,#00b3db71, #ff00005f );
+  background: linear-gradient(135deg, #ff00bf49 ,#00b3db5d, #ff00004d );
 
   backdrop-filter: blur(10px);
   margin: 0;
