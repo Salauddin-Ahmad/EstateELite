@@ -4,11 +4,16 @@
 
 
 body {
-    /* background: url('your-image-url.jpg') no-repeat center center fixed; Image background */
-    background-size: cover; /* Ensures the image covers the entire screen */
-    background-color:  rgba(255, 255, 255, 0.922); 
-    margin: 0; /* Removes default margin */
-    padding: 0; /* Removes default padding */
-    min-height: 100vh; /* Ensures the body is at least the height of the viewport */
-  }
-  
+  /* background: url('your-image-url.jpg') no-repeat center center fixed; Image background */
+  background-size: cover;
+  /* Ensures the image covers the entire screen */
+  background: linear-gradient(135deg, #ff00bf5c ,#00b3db71, #ff00005f );
+
+  backdrop-filter: blur(10px);
+  margin: 0;
+  /* Removes default margin */
+  padding: 0;
+  /* Removes default padding */
+  min-height: 100vh;
+  /* Ensures the body is at least the height of the viewport */
+}
