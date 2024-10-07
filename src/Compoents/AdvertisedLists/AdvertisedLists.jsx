@@ -30,7 +30,7 @@ const AdvertisedLists = () => {
       {properties?.map(property => (
         <div key={property._id} className="card bg-[rgba(0,66,116,.3)] backdrop-blur-2xl shadow-lg ">
           <img 
-          className="rounded-t-xl w-auto h-40"
+          className=" w-auto h-40"
           src={property.propertyImage}
            alt={property.title} />
           <div className="p-3">
