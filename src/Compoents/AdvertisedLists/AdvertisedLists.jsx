@@ -28,15 +28,14 @@ const AdvertisedLists = () => {
 
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
       {properties?.map(property => (
-        <div key={property._id} className=" bg-[rgba(0,66,116,0.14)] backdrop-blur-3xl shadow-lg  hover:scale-95 ease-in-out duration-300 ">
+        <div key={property._id} className=" bg-[rgba(0,66,116,0.08)] backdrop-blur-2xl shadow-xl shadow--500  hover:scale-95 ease-in-out duration-300 ">
           <img 
           className=" w-full h-44"
           src={property.propertyImage}
            alt={property.title} />
           <div className="p-3">
-            <h2 className="font-bold text-xl">{property.title}</h2>
-            <p><span className="font-semibold flex ">Location:
-            <MdMyLocation />  </span>{property.location}</p>
+            <h2 className="font-bold">{property.title}</h2>
+            
             <p><span className="font-semibold">Price range: </span>${property.priceRangeMin} - ${property.priceRangeMax}</p>
             <div className="flex justify-center items-center mt-2 ">
             <Link to={`/property/${property._id}`}>
