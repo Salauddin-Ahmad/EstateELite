@@ -128,7 +128,8 @@ const Testimonials = () => {
         ></div>
         {sortedReviews.map((review, index) => (
           <SwiperSlide key={index}>
-            <div className="flex flex-col items-center justify-center h-full p-6 bg-slate-100 rounded-lg shadow-lg my-4">
+          <div className="flex flex-col items-center justify-center h-full p-6 back rounded-lg my-4" style={{ boxShadow: '0 1px 8px rgba(0, 0, 0, 0.8)' }}>
+
               <div className="flex items-center mb-4">
                 <img
                   src={review.photo}

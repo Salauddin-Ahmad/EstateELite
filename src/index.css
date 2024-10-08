@@ -7,9 +7,9 @@ body {
   /* background: url('your-image-url.jpg') no-repeat center center fixed; Image background */
   background-size: cover;
   /* Ensures the image covers the entire screen */
-  background: linear-gradient(135deg, #ff00bf49 ,#00b3db5d, #ff00004d );
+  background: linear-gradient(135deg, #002fff34 ,#00acdb5d, #aaff004d );
+  /* background: linear-gradient(135deg, #62ff003c ,#45db0043, #00ffcc58 ); */
 
-  backdrop-filter: blur(10px);
   margin: 0;
   /* Removes default margin */
   padding: 0;
