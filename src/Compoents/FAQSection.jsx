@@ -43,7 +43,7 @@ const FAQSection = () => {
       <h2 className="text-3xl font-bold  text-center font-sans mb-8">
         Frequently Asked Questions
       </h2>
-      <div className="faq-section bg-slate-100 p-6 rounded-lg shadow-md mb-10">
+      <div className="faq-section p-6 rounded-lg shadow-md mb-10">
         {faqData.map((faq, index) => (
           <div
             key={index}

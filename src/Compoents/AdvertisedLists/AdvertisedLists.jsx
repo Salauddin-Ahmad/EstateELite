@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import useAuth from "../../hook/useAuth";
 import useAxiosSecure from "../../hook/useAxiosSecure";
 import { Link } from "react-router-dom";
-import { MdMyLocation } from "react-icons/md";
+
 const AdvertisedLists = () => {
   const axiosSecure = useAxiosSecure();
   const { user } = useAuth();

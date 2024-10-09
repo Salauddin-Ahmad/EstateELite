@@ -31,7 +31,7 @@ return (
 
 
 <div className="flex">
-      <div className="w-64 min-h-screen bg-slate-200">
+      <div className="w-64 min-h-screen  bg-[rgba(110,251,106,0.15)]  backdrop-blur-lg">
         <ul className="menu p-4">
           {isAdmin ? (
             <>

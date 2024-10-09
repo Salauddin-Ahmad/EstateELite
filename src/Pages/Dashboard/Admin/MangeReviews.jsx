@@ -58,7 +58,7 @@ const ManageReviews = () => {
       <h1 className="text-2xl font-bold mb-6">Total Reviews: {reviewsAll?.length}</h1>
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-2  pt-1">
         {reviewsAll.map((review) => (
-          <div key={review._id} className="bg-slate-100 p-4 border-2 border-slate-200 rounded-lg shadow-md">
+          <div key={review._id} className=" bg-[rgba(206,215,236,0.15)]  p-4 border-2 border-slate-200 rounded-lg shadow-md">
             <div className="flex items-center mb-4">
               <img src={review.photo} alt={review.name} className="w-10 h-10 rounded-full mr-4" />
               <div>
