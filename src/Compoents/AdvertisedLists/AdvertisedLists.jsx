@@ -28,7 +28,7 @@ const AdvertisedLists = () => {
 
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
       {properties?.map(property => (
-        <div key={property._id} className=" bg-[rgba(0,66,116,0.08)] backdrop-blur-2xl shadow-xl shadow--500  hover:scale-95 ease-in-out duration-300 ">
+        <div key={property._id} className=" bg-[rgba(0,66,116,0.08)]  shadow-xl shadow--500  hover:scale-95 ease-in-out duration-300 ">
           <img 
           className=" w-full h-44"
           src={property.propertyImage}
