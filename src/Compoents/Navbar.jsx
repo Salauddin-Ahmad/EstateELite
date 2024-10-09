@@ -44,7 +44,7 @@ const Navbar = () => {
             <span className="p-2 text-lg font-bold">All Properties</span>
           </NavLink>
         </li>
-        
+
         {!user && (
           <li>
             <NavLink to="/login">
@@ -67,7 +67,10 @@ const Navbar = () => {
                 src="https://i.ibb.co/CVjTYfB/Screenshot-2024-06-01-123321.png"
                 alt=""
               />
-              <span className="font-bold text-4xl">EstateElite</span>
+              {/* <span className="font-bold text-4xl">EstateElite</span> */}
+              <span className="font-bold text-4xl text-gradient animate-gradient">EstateElite</span>
+
+
             </NavLink>
           </div>
           <ul
@@ -80,7 +83,7 @@ const Navbar = () => {
       </div>
       <div className="flex-none">
         <div className="hidden lg:block">{navLinks}</div>
-
+        {/* 
         {user && (
           <div className="dropdown dropdown-end z-50">
             <div
@@ -96,6 +99,7 @@ const Navbar = () => {
                 />
               </div>
             </div>
+
             <ul
               tabIndex={0}
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
@@ -110,7 +114,43 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
+        )} */}
+        {user && (
+          <div className="relative z-50">
+            <div className="dropdown dropdown-end">
+              <div
+                tabIndex={0}
+                role="button"
+                className="btn btn-ghost btn-circle avatar focus:outline-none"
+              >
+                <div title={user?.displayName} className="w-10 h-10 rounded-full border-2 border-transparent hover:border-primary transition-all duration-300">
+                  <img
+                    referrerPolicy="no-referrer"
+                    alt="User Profile Photo"
+                    src={user?.photoURL}
+                    className="w-full h-full object-cover rounded-full"
+                  />
+                </div>
+              </div>
+
+              <ul
+                tabIndex={0}
+                className="  dropdown-content  p-1 shadow-lg backdrop-blur-4xl  bg-[rgba(206,212,236,0.79)]  rounded-lg w-48 border border-gray-200"
+              >
+                <li>
+                  <button
+                    onClick={logOut}
+                    className="w-full  py-1 text-base text-gray-700 hover:bg-[#dd1919]  transition-colors rounded-md hover:scale-95 ease-in-300"
+                  >
+                    Logout
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
         )}
+
+
       </div>
     </div>
   );

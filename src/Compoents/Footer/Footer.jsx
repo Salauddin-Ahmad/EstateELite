@@ -5,7 +5,7 @@ const Footer = () => {
         <div className="sm:flex sm:items-center sm:justify-between">
           <a href="#" className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
             <img src="https://i.ibb.co/CVjTYfB/Screenshot-2024-06-01-123321.png" className="h-16 w-16 rounded-full border-4 border-gray-400 " alt="EstateElite Logo" />
-            <span className="self-center text-3xl font-semibold whitespace-nowrap ">EstateElite</span>
+            <span className="self-center text-3xl font-semibold whitespace-nowrap text-gradient animate-gradient ">EstateElite</span>
           </a>
           <ul className="flex flex-wrap items-center mb-6 text-base font-medium  sm:mb-0 ">
             <li>

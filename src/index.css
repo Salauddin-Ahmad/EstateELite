@@ -17,3 +17,25 @@ body {
   min-height: 100vh;
   /* Ensures the body is at least the height of the viewport */
 }
+
+
+.text-gradient {
+  background: linear-gradient(60deg, orange, red, green, yellow);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 400% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradientMove 4s linear infinite;
+}
