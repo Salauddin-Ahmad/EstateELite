@@ -8,14 +8,33 @@ const Dashboard = () => {
   const [isAdmin, isAdminLoading] = useAdmin();
   const [isAgent, isAgentLoading] = useAgent();
 
-  if (isAdminLoading || isAdminLoading ) {
-    return <>
-    <div className="flex justify-center items-center pt-28" >
-    <div className="  w-16 h-16 border-8 border-dashed rounded-full animate-spin border-blue-600"></div>
-    </div>
-    </>
+  // if (isAdminLoading || isAdminLoading ) {
+  //   return <>
+  //   <div className="flex justify-center items-center pt-28" >
+  //   <div className="  w-16 h-16 border-8 border-dashed rounded-full animate-spin border-blue-600"></div>
+  //   </div>
+  //   </>
+  // }
+  if (isAdminLoading || isAdminLoading) {
+    return (
+      <div className="flex flex-col gap-4 p-4">
+        {/* Example skeleton card */}
+        <div className="skeleton-card">
+          <div className="skeleton-image"></div>
+          <div className="skeleton-text"></div>
+          <div className="skeleton-text short"></div>
+        </div>
+  
+        <div className="skeleton-card">
+          <div className="skeleton-image"></div>
+          <div className="skeleton-text"></div>
+          <div className="skeleton-text short"></div>
+        </div>
+        {/* Add more skeletons as needed */}
+      </div>
+    );
   }
-
+  
 
 
 return (
