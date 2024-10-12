@@ -171,7 +171,7 @@ const PropertyDetails = () => {
             <div key={review._id} className="border rounded-md mb-6">
               <h1 className="text-2xl my-8 ml-3">{review.review}</h1>
               <div className="flex items-center">
-                <img className="w-10 h-10 rounded-full" src={review.photo} alt="" />
+                <img className="w-10 h-10 rounded" src={review.photo} alt="" />
                 <p className="ml-3 mb-2">By: {review.name}</p>
               </div>
             </div>
@@ -188,7 +188,7 @@ const PropertyDetails = () => {
             id="review"
             value={review}
             onChange={(e) => setReview(e.target.value)}
-            className="mt-1 block w-full border py-2 border-blue-500 bg-blue-100 rounded-md shadow-sm p-2"
+            className="mt-1 block w-full border py-2 border-blue-500  rounded-md shadow-sm p-2"
             rows="4"
             placeholder="Write your review here..."
             required
