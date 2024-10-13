@@ -11,7 +11,7 @@ const Navbar = () => {
             to="/"
             className={({ isActive }) =>
               isActive
-                ? "text-green-600 rounded-lg border[#58d4db77]  font-bold  "
+                ? "text-green-600 rounded-lg   font-bold  "
                 : "font-bold "
             }
           >
@@ -83,38 +83,7 @@ const Navbar = () => {
       </div>
       <div className="flex-none">
         <div className="hidden lg:block">{navLinks}</div>
-        {/* 
-        {user && (
-          <div className="dropdown dropdown-end z-50">
-            <div
-              tabIndex={0}
-              role="button"
-              className="btn btn-ghost btn-circle avatar"
-            >
-              <div title={user?.displayName} className="w-10 rounded-full">
-                <img
-                  referrerPolicy="no-referrer"
-                  alt="User Profile Photo"
-                  src={user?.photoURL}
-                />
-              </div>
-            </div>
-
-            <ul
-              tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
-            >
-              <li className="mt-2">
-                <button
-                  onClick={logOut}
-                  className="bg-gray-200 block text-center"
-                >
-                  Logout
-                </button>
-              </li>
-            </ul>
-          </div>
-        )} */}
+  
         {user && (
           <div className="relative z-50">
             <div className="dropdown dropdown-end">
