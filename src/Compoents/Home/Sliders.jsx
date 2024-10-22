@@ -3,6 +3,9 @@ import { Navigation, Pagination, Scrollbar, Autoplay } from "swiper/modules";
 import "swiper/swiper-bundle.css";
 
 const Sliders = () => {
+  <div>
+  <h1 className="text-2xl"> Discover and buy Real Estate Properties</h1>
+ </div>
   return (
     <div className="mb-5 mt-[2px]">
  

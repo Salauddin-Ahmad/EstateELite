@@ -56,7 +56,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="navbar bg-[rgba(206,215,236,0.35)]  backdrop-blur-[6px] fixed z-50
+    <div className="navbar bg-[rgba(206,215,236,0.35)]   backdrop-blur-[6px] fixed z-50
     top-0 left-0 w-full ">
       <div className="flex-1">
         <div className="dropdown relative">

@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
-    <footer className="">
-      <div className="w-full mx-auto p-4 md:py-8">
+    <footer className="   ">
+      <div className="w-full mx-auto p-4 md:py-8   bg-[rgba(206,215,236,0.35)]   ">
         <div className="sm:flex sm:items-center sm:justify-between">
           <a href="#" className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
             <img src="https://i.ibb.co/CVjTYfB/Screenshot-2024-06-01-123321.png" className="h-16 w-16 rounded-full border-4 border-gray-400 " alt="EstateElite Logo" />
