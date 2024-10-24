@@ -40,10 +40,10 @@ const FAQSection = () => {
 
   return (
     <>
-      <h2 className="text-3xl font-bold  text-center font-sans mb-8">
+      <h2 className="text-3xl font-bold  text-center font-sans sm:mt-4 mb-4 sm:mb-8">
         Frequently Asked Questions
       </h2>
-      <div className="faq-section p-6 rounded-lg shadow-md mb-10">
+      <div className="faq-section p-6 rounded-lg shadow-md mb-8">
         {faqData.map((faq, index) => (
           <div
             key={index}
@@ -63,7 +63,7 @@ const FAQSection = () => {
               </span>
             </div>
             {activeIndex === index && (
-              <div className="faq-answer mt-4">
+              <div className="faq-answer ">
                 <p>{faq.answer}</p>
               </div>
             )}
