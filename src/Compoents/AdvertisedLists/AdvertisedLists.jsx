@@ -30,7 +30,7 @@ const AdvertisedLists = () => {
       {properties?.map(property => (
         <div key={property._id} className=" bg-[rgba(0,66,116,0.08)]  shadow-xl shadow--500  hover:scale-95 ease-in-out duration-300 ">
           <img 
-          className=" w-full h-44"
+          className=" w-full h-52"
           src={property.propertyImage}
            alt={property.title} />
           <div className="p-3">

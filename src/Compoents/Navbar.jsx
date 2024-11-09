@@ -5,13 +5,13 @@ const Navbar = () => {
   const { user, logOut } = useAuth();
   const navLinks = (
     <>
-      <ul className="menu menu-horizontal px-1">
+      <ul className=" menu-horizontal px-1 py-6  ">
         <li>
           <NavLink
             to="/"
             className={({ isActive }) =>
               isActive
-                ? "text-green-600 rounded-lg   font-bold  "
+                ? "text-blue-600 rounded-lg font-bold hover:bg-transparent "
                 : "font-bold "
             }
           >
@@ -24,11 +24,11 @@ const Navbar = () => {
             to="/dashboard"
             className={({ isActive }) =>
               isActive
-                ? "text-green-600 rounded-lg border[#58d4db77]  font-bold  "
+                ? "text-green-600 rounded-lg font-bold hover:bg-transparent "
                 : "font-bold "
             }
           >
-            <span className="p-2 text-lg font-bold">Dashboard</span>
+            <span className="p-2 text-lg font-bold ">Dashboard</span>
           </NavLink>
         </li>
 
@@ -37,7 +37,7 @@ const Navbar = () => {
             to="/allProperties"
             className={({ isActive }) =>
               isActive
-                ? "text-green-600 rounded-lg border[#58d4db77]  font-bold  "
+                ? "text-blue-600 rounded-lg border[#58d4db77]  font-bold hover:bg-transparent "
                 : "font-bold "
             }
           >
@@ -60,7 +60,7 @@ const Navbar = () => {
     top-0 left-0 w-full ">
       <div className="flex-1">
         <div className="dropdown relative">
-          <div tabIndex={0} role="button" className="btn btn-ghost ">
+          <div tabIndex={0} role="button" >
             <NavLink to="/" className="flex gap-2 items-center">
               <img
                 className="w-full h-12 rounded-full border-4 border-gray-400"
@@ -82,7 +82,7 @@ const Navbar = () => {
         </div>
       </div>
       <div className="flex-none">
-        <div className="hidden lg:block">{navLinks}</div>
+        <div className="hidden lg:block ">{navLinks}</div>
   
         {user && (
           <div className="relative z-50">
