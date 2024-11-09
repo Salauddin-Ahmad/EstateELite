@@ -21,7 +21,7 @@ const AdvertisedLists = () => {
   return (
     <>
       <div>
-        <h1 className="text-4xl font-extrabold text-center my-10 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-teal-400">
+        <h1 className="text-4xl font-extrabold text-center my-10  ">
           Top Trending Properties
         </h1>
       </div>
@@ -47,7 +47,7 @@ const AdvertisedLists = () => {
               <p className="text-gray-500">
                 <span className="font-semibold text-gray-700">Price range:</span> ${property.priceRangeMin} - ${property.priceRangeMax}
               </p>
-              <div className="flex justify-center mt-4">
+              <div className="flex justify-center pt-4">
                 <Link to={`/property/${property._id}`}>
                   <button className="px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-blue-500 to-teal-400 rounded-full shadow-md hover:shadow-lg transform transition-transform hover:scale-105 focus:outline-none">
                     View Details
