@@ -22,7 +22,7 @@ const Sliders = () => {
       >
         <SwiperSlide>
           <img
-            src="https://i.postimg.cc/SQ9fky6S/austin-distel-jp-Hw8ndw-J-Q-unsplash.jpg"
+            src="https://i.ibb.co.com/d4Fg3pN/premium-photo-1677782975062-56111703e90e.jpg"
             alt=""
             style={{
               width: "100%",
@@ -34,7 +34,7 @@ const Sliders = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="https://i.postimg.cc/W4K0cKtq/avi-waxman-f9q-Zu-Ko-ZYo-Y-unsplash.jpg"
+            src="https://i.ibb.co.com/89ycR4q/dillon-kydd-pvdx8c6-Y5-BY-unsplash.jpg"
             alt=""
             style={{
               width: "100%",
@@ -46,7 +46,7 @@ const Sliders = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="https://i.postimg.cc/CLHCnmr9/scott-graham-5f-Nm-Wej4t-AA-unsplash.jpg"
+            src="https://i.ibb.co.com/yqfxvfc/luca-micheli-Rpv-C77-ex-G0-unsplash.jpg"
             alt=""
             style={{
               width: "100%",
