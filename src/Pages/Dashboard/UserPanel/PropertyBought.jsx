@@ -28,8 +28,8 @@ const PropertyBought = () => {
       <h1 className="text-2xl font-semibold mb-6">Properties Bought: {propertyBought?.length}</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
         {propertyBought?.map((property) => (
-          <div key={property._id} className="border border-gray-300 rounded-md  shadow-sm">
-             <img src={property.propertyImage} alt={property.propertyTitle} className="w-full h-48 object-cover rounded-md mb-4" />
+          <div key={property._id} className=" rounded-md  shadow-sm bg-[#ffffff4f] hover:shadow-xl hover:scale-105 transition-all duration-300">
+             <img src={property.propertyImage} alt={property.propertyTitle} className="w-full h-48 object-cover rounded-t-md mb-4" />
            <div className="px-4 mb-3">
             <h2 className="text-xl font-semibold mb-2">{property.propertyTitle}</h2>
             <p className="text-gray-600 mb-2">Location: {property.propertyLocation}</p>

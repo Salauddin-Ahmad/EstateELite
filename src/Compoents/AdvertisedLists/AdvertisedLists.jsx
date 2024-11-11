@@ -7,7 +7,7 @@ const AdvertisedLists = () => {
   const axiosSecure = useAxiosSecure();
   const { user } = useAuth();
 
-  const { data: properties, isLoading, error } = useQuery({
+  const { data: properties, error } = useQuery({
     queryKey: ['advertised'],
     queryFn: async () => {
       const res = await axiosSecure.get(`/advertised`);
@@ -15,7 +15,7 @@ const AdvertisedLists = () => {
     },
   });
 
-  if (isLoading) return <div>Loading...</div>;
+  // if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error fetching properties</div>;
 
   return (

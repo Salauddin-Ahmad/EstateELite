@@ -59,9 +59,9 @@ const MyReviews = () => {
   return (
     <div>
       <h1 className="text-2xl mb-3">Total reviews: {allReviews.length}</h1>
-      <div className="space-y-4">
+      <div className="space-y-4 ">
         {allReviews.map((review) => (
-          <div key={review._id} className="border p-4 rounded-md shadow-md">
+          <div key={review._id} className="border p-4 rounded-md shadow-md bg-[#ffffff39]">
             <h2 className="text-xl font-semibold">{review.title}</h2>
             <p className="text-gray-500"><span className="font-bold">Agent:</span> {review.agentName}</p>
             <p className="text-gray-500"><span className="font-bold">Reviewed on:</span> {new Date(review.reviewTime).toLocaleDateString()}</p>

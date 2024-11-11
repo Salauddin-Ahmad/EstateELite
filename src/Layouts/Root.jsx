@@ -5,12 +5,11 @@ import Footer from "../Compoents/Footer/Footer";
 const Root = () => {
     return (
         <div>
-             <div className="">
-             <Navbar></Navbar>
-             </div>
+            <div className="">
+                <Navbar></Navbar>
+            </div>
             <div className="pt-[70px]">
-            <Outlet></Outlet>
-         
+                <Outlet></Outlet>
             </div>
             <Footer></Footer>
         </div>

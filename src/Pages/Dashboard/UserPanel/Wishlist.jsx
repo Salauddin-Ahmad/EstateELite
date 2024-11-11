@@ -25,11 +25,11 @@ const Wishlist = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 ">
         {wishlisted?.map((wishlist) => (
           <div
-            className="card border space-y-1 rounded-md mx-3"
+            className="card space-y-1 rounded-md mx-3 hover:shadow-xl hover:scale-105 transition-all duration-300 bg-[#ffffff58]"
             key={wishlist._id}
           >
             <img 
-            className="w-full rounded-md max-h-60 object-cover"
+            className="w-full rounded-t-md max-h-60 object-cover"
             src={wishlist?.propertie?.propertyImage} alt="" />
            <div className="px-3">
            <h1>Name: {wishlist?.propertie?.title}</h1>
