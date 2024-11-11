@@ -1,52 +1,36 @@
-// import AdvertisedLists from "../AdvertisedLists/AdvertisedLists";
-// import FAQSection from "../FAQSection";
-// import Testimonials from "../Testimonials/Testimonials";
-// import WhyUS from "../WhyUS";
-// import Sliders from "./Sliders";
-
-// const Home = () => {
-//     return (
-//         <div>
-//             <Sliders></Sliders>
-//             <AdvertisedLists></AdvertisedLists>
-//             <Testimonials></Testimonials>
-//             <WhyUS></WhyUS>
-//             <FAQSection></FAQSection>
-//         </div>
-//     );
-// };
-
-// export default Home;
-
-
-import { useEffect, useState } from "react";
+import { useQuery } from "@tanstack/react-query";
+import useAxiosSecure from "../../hook/useAxiosSecure";
 import AdvertisedLists from "../AdvertisedLists/AdvertisedLists";
 import FAQSection from "../FAQSection";
+import Skeleton from "../Skeleton";
 import Testimonials from "../Testimonials/Testimonials";
 import WhyUS from "../WhyUS";
 import Sliders from "./Sliders";
-import Skeleton from "../Skeleton";
 
 
 const Home = () => {
-    const [isLoaded, setIsLoaded] = useState(false);
 
-    useEffect(() => {
-        const handleLoad = () => setIsLoaded(true);  // Corrected the typo
-        window.addEventListener("load", handleLoad);
-        return () => window.removeEventListener("load", handleLoad);
-    },[]);
+    const axiosSecure = useAxiosSecure()
+
+    const { data: properties,  error, isLoading } = useQuery({
+        queryKey: ['advertised'],
+        queryFn: async () => {
+            const res = await axiosSecure.get('/advertised');
+            return res.data;
+        }
+    })
+    
+    if (error) return <div>Error: {error.message}</div>;
 
     return (
         <div>
-           {!isLoaded ? <Skeleton /> : <Sliders />}
-           {!isLoaded ? <Skeleton /> : <AdvertisedLists />}
-            <Testimonials />
-            <WhyUS />
-            <FAQSection />
+            <Sliders></Sliders>
+            {!isLoading ? <AdvertisedLists /> : <Skeleton />}
+            <Testimonials></Testimonials>
+            <WhyUS></WhyUS>
+            <FAQSection></FAQSection>
         </div>
     );
 };
 
 export default Home;
-

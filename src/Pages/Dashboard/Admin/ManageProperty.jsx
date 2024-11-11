@@ -1,6 +1,7 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import useAxiosSecure from "../../../hook/useAxiosSecure";
 import Swal from 'sweetalert2';
+import Spinner from '../../../Compoents/Spinner';
 
 const ManageProperty = () => {
   const axiosSecure = useAxiosSecure();
@@ -30,7 +31,7 @@ const ManageProperty = () => {
     }
   });
 
-  if (isLoading) return <h2>Loading...</h2>;
+  if (isLoading) return <Spinner/>;
   if (isError) return <h2>Error loading properties</h2>;
 
   const handleVerify = (id) => {

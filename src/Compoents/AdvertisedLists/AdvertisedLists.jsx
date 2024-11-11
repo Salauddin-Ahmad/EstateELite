@@ -7,7 +7,7 @@ const AdvertisedLists = () => {
   const axiosSecure = useAxiosSecure();
   const { user } = useAuth();
 
-  const { data: properties, error } = useQuery({
+  const { data: properties, isLoading, error } = useQuery({
     queryKey: ['advertised'],
     queryFn: async () => {
       const res = await axiosSecure.get(`/advertised`);

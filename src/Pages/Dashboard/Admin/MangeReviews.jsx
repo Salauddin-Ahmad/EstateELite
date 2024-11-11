@@ -2,6 +2,7 @@ import React from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import useAxiosSecure from '../../../hook/useAxiosSecure';
 import Swal from 'sweetalert2';
+import Spinner from '../../../Compoents/Spinner';
 
 const ManageReviews = () => {
   const axiosSecure = useAxiosSecure();
@@ -46,7 +47,8 @@ const ManageReviews = () => {
   };
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <> <Spinner />
+    </>
   }
 
   if (isError) {
