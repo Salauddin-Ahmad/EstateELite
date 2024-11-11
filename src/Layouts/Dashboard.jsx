@@ -2,6 +2,7 @@ import { NavLink, Outlet,  } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
 import useAdmin from "../hook/useAdmin";
 import useAgent from "../hook/useAgent";
+import Skeleton from "../Compoents/Skeleton";
 // import useAuth from "../hook/useAuth";
 
 const Dashboard = () => {
@@ -18,21 +19,7 @@ const Dashboard = () => {
 
   if (isAdminLoading || isAdminLoading) {
     return (
-      <div className="flex flex-col gap-4 p-4">
-        {/* Example skeleton card */}
-        <div className="skeleton-card">
-          <div className="skeleton-image"></div>
-          <div className="skeleton-text"></div>
-          <div className="skeleton-text short"></div>
-        </div>
-  
-        <div className="skeleton-card">
-          <div className="skeleton-image"></div>
-          <div className="skeleton-text"></div>
-          <div className="skeleton-text short"></div>
-        </div>
-        {/* Add more skeletons as needed */}
-      </div>
+      <Skeleton/>
     );
   }
   
