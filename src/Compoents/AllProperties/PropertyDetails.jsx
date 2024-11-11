@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import useAxiosSecure from "../../hook/useAxiosSecure";
 import useAuth from "../../hook/useAuth";
 import Swal from "sweetalert2";
+import Skeleton from "../Skeleton";
 
 const PropertyDetails = () => {
   const [review, setReview] = useState("");
@@ -91,7 +92,7 @@ const PropertyDetails = () => {
   };
 
   if (propertyLoading || reviewsLoading) {
-    return <div>Loading...</div>;
+    return <Skeleton/>;
   }
 
   if (propertyError || reviewsError) {
