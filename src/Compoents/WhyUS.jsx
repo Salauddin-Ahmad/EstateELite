@@ -3,7 +3,8 @@ const WhyUS = () => {
     <div className="h-full min-h-screen w-full bg-inherit pt-10 p-4">
       <h1 className="text-3xl font-extrabold text-center mb-10 font-sans">Why Choose Us?</h1>
       <div className="grid gap-14 md:grid-cols-3 md:gap-5">
-        <div className="rounded-xl border  p-6 text-center shadow-xl  hover:scale-105 ease-in-out duration-300 ">
+
+        <div className="rounded-xl border  p-6 text-center shadow-xl  hover:scale-105 ease-in-out duration-300  bg-[#ffffff43] h-min-[100px]" >
           <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
             <svg
               viewBox="0 0 33 46"
@@ -27,7 +28,7 @@ const WhyUS = () => {
 
         <div
           data-aos-delay="150"
-          className="rounded-xl border  p-6 text-center shadow-xl hover:scale-105 ease-in-out duration-300"
+          className="rounded-xl border  p-6 text-center shadow-xl hover:scale-105 ease-in-out duration-300 bg-[#ffffff43]"
         >
           <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-rose-500 shadow-rose-500/40">
             <svg
@@ -51,7 +52,7 @@ const WhyUS = () => {
         </div>
         <div
           data-aos-delay="300"
-          className="rounded-xl border p-6 text-center shadow-xl  hover:scale-105 ease-in-out duration-300"
+          className="rounded-xl border p-6 text-center shadow-xl  hover:scale-105 ease-in-out duration-300 bg-[#ffffff43]"
         >
           <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-sky-500 shadow-sky-500/40">
             <svg
