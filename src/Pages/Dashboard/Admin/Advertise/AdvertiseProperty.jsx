@@ -3,15 +3,16 @@ import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import useAxiosSecure from "../../../../hook/useAxiosSecure";
 import useAdmin from "../../../../hook/useAdmin";
 import useAuth from "../../../../hook/useAuth";
+import Spinner from "../../../../Compoents/Spinner";
 
 
 const AdvertiseProperty = () => {
-    const [isAdmin] = useAdmin();
-    const {user} = useAuth();
+  const [isAdmin] = useAdmin();
+  const { user } = useAuth();
   const axiosSecure = useAxiosSecure();
   const queryClient = useQueryClient();
-    const email = user.email;
-    console.log(email)
+  const email = user.email;
+  console.log(email)
 
   const fetchVerifiedProperties = async () => {
     const response = await axiosSecure.get("/propertiesVerified");
@@ -37,7 +38,7 @@ const AdvertiseProperty = () => {
     },
   });
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) return <Spinner />;
   if (error) return <div>Error loading properties</div>;
 
   return (
@@ -64,7 +65,7 @@ const AdvertiseProperty = () => {
                 />
               </td>
               <td className="border px-4 py-2">{property.title}</td>
-              <td className="border px-4 py-2">Min {property.priceRangeMin} <br />  
+              <td className="border px-4 py-2">Min {property.priceRangeMin} <br />
                 Max {property.priceRangeMax}</td>
               <td className="border px-4 py-2">{property.agentName}</td>
               <td className="border px-4 py-2">
