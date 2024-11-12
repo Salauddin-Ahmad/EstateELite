@@ -101,7 +101,7 @@ const PropertyDetails = () => {
 
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 border border-gray-200 my-6 rounded-lg shadow-lg bg-white">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 border border-gray-200 my-6 rounded-lg shadow-lg bg-[#ffffff69]">
         <div>
           <img
             src={propertie.propertyImage}
@@ -150,7 +150,7 @@ const PropertyDetails = () => {
           reviews.map((review) => (
             <div
               key={review._id}
-              className="border rounded-md p-4 bg-gray-50 shadow-sm space-y-2"
+              className="border rounded-md p-4 bg-[#ffffff69] shadow-sm space-y-2"
             >
               <div className="flex items-center space-x-3">
                 <img className="w-8 h-8 rounded-full shadow" src={review.photo} alt="" />
@@ -172,7 +172,7 @@ const PropertyDetails = () => {
             id="review"
             value={review}
             onChange={(e) => setReview(e.target.value)}
-            className="w-full border rounded-md p-4 focus:ring-2 focus:ring-blue-500"
+            className="w-full border bg-[#ffffff69] rounded-md p-4 focus:ring-2 focus:ring-blue-500"
             rows="4"
             placeholder="Write your review here..."
             required
