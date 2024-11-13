@@ -1,7 +1,8 @@
 import { useQuery } from '@tanstack/react-query';
 import { Link } from 'react-router-dom';
 import useAxiosSecure from '../../hook/useAxiosSecure';
-import SkeletonDynamic from '../SkeletonDynamic';
+import SkeletonDynamic from '../skeletons/SkeletonDynamic';
+
 
 const AllProperties = () => {
     const axiosSecure = useAxiosSecure();
@@ -14,7 +15,7 @@ const AllProperties = () => {
     });
 
     if (isLoading) {
-        return  <SkeletonDynamic cardCount={properties?.length || 6} />
+        return <SkeletonDynamic cardCount={properties?.length || 6} />
     }
 
     if (isError) {
@@ -55,12 +56,12 @@ const AllProperties = () => {
                         {/* <p className="text-lg font-semibold text-blue-600 mb-4">${property?.priceRangeMin} - ${property.priceRangeMax}</p> */}
 
                         <div className='flex justify-center'>
-                        <Link
-                            to={`/property/${property?._id}`}
-                            className="inline-block  px-6 py-3 text-sm font-semibold text-white bg-gradient-to-r from-blue-500 to-teal-400 rounded-full shadow-md hover:shadow-lg transition-transform transform hover:scale-105"
-                        >
-                            Details
-                        </Link>
+                            <Link
+                                to={`/property/${property?._id}`}
+                                className="inline-block  px-6 py-3 text-sm font-semibold text-white bg-gradient-to-r from-blue-500 to-teal-400 rounded-full shadow-md hover:shadow-lg transition-transform transform hover:scale-105"
+                            >
+                                Details
+                            </Link>
                         </div>
                     </div>
                 </div>

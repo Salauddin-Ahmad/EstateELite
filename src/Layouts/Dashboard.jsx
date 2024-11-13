@@ -2,7 +2,7 @@ import { NavLink, Outlet,  } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
 import useAdmin from "../hook/useAdmin";
 import useAgent from "../hook/useAgent";
-import Skeleton from "../Compoents/Skeleton";
+import Skeleton from "../Compoents/skeletons/Skeleton";
 // import useAuth from "../hook/useAuth";
 
 const Dashboard = () => {

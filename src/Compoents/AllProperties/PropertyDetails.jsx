@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import useAxiosSecure from "../../hook/useAxiosSecure";
 import useAuth from "../../hook/useAuth";
 import Swal from "sweetalert2";
-import Skeleton from "../Skeleton";
+import DetailsPageSkeleton from "../skeletons/DetailsPageSkeleton";
 
 const PropertyDetails = () => {
   const [review, setReview] = useState("");
@@ -92,7 +92,7 @@ const PropertyDetails = () => {
   };
 
   if (propertyLoading || reviewsLoading) {
-    return <Skeleton/>;
+    return <DetailsPageSkeleton />;
   }
 
   if (propertyError || reviewsError) {
@@ -171,6 +171,7 @@ const PropertyDetails = () => {
             name="review"
             id="review"
             value={review}
+
             onChange={(e) => setReview(e.target.value)}
             className="w-full border bg-[#ffffff69] rounded-md p-4 focus:ring-2 focus:ring-blue-500"
             rows="4"
