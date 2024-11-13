@@ -58,7 +58,7 @@ const Sliders = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="https://i.postimg.cc/CxhGGkW5/digital-marketing-agency-ntwrk-g39p1k-Djv-SY-unsplash.jpg"
+            src="https://i.ibb.co.com/sF2fPWx/photo-1721149122657-7b5440f39160.jpg"
             alt=""
             style={{
               width: "100%",

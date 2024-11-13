@@ -1,6 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import { Link } from 'react-router-dom';
 import useAxiosSecure from '../../hook/useAxiosSecure';
+import SkeletonDynamic from '../SkeletonDynamic';
 
 const AllProperties = () => {
     const axiosSecure = useAxiosSecure();
@@ -13,21 +14,7 @@ const AllProperties = () => {
     });
 
     if (isLoading) {
-        return  <div className="flex flex-col gap-4 p-4">
-        {/* Skeleton card 1 */}
-        <div className="skeleton-card">
-          <div className="skeleton-image"></div>
-          <div className="skeleton-text"></div>
-          <div className="skeleton-text short"></div>
-        </div>
-  
-        {/* Skeleton card 2 */}
-        <div className="skeleton-card">
-          <div className="skeleton-image"></div>
-          <div className="skeleton-text"></div>
-          <div className="skeleton-text short"></div>
-        </div>
-      </div>;
+        return  <SkeletonDynamic cardCount={properties?.length || 6} />
     }
 
     if (isError) {

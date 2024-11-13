@@ -6,6 +6,7 @@ import Skeleton from "../Skeleton";
 import Testimonials from "../Testimonials/Testimonials";
 import WhyUS from "../WhyUS";
 import Sliders from "./Sliders";
+import SkeletonDynamic from "../SkeletonDynamic";
 
 
 const Home = () => {
@@ -25,7 +26,7 @@ const Home = () => {
     return (
         <div>
             <Sliders></Sliders>
-            {!isLoading ? <AdvertisedLists /> : <Skeleton />}
+            {!isLoading ? <AdvertisedLists /> : <SkeletonDynamic cardCount={6}/>}
             <Testimonials></Testimonials>
             <WhyUS></WhyUS>
             <FAQSection></FAQSection>
