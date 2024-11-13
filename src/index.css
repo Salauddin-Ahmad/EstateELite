@@ -2,12 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-
 body {
   /* background: url('your-image-url.jpg') no-repeat center center fixed; Image background */
   background-size: cover;
   /* Ensures the image covers the entire screen */
-  background: linear-gradient(140deg,  #00acdb87, #aaff0046 );
+  /* background: linear-gradient(140deg,  #00acdb87, #aaff0046 );/ */
+  /* background: linear-gradient(140deg, #cd7d94a0, #e9cb9f, #ffd4c4); */
+  /* background: linear-gradient(140deg, #ff6a13, #fc4a1a, #f0b23b); */
+
+  /* awesome blue */
+   /* background: linear-gradient(140deg, #659fb49a, #5c92a1, #4fa8be70);   */
+   /* background: linear-gradient(140deg, #70b3cc76, #5c92a1e2, #5ebbd283);   */
+
+  /* background: linear-gradient(140deg, #b58b65, #d8d0a9, #c6b092); */
+  /* background: linear-gradient(140deg, #66ff66, #33cc33, #1a8026); */
+  /* background: linear-gradient(140deg, #f9a8d4, #fdaeae, #f9b2a4); */
+  /* good one */
+  background: linear-gradient(140deg, #3f86a6, #a1c1cc, #8eb9be);
+  /* background: linear-gradient(140deg, #edde3a47, #dc885341, #ce911756); */
+
   /* background: linear-gradient(135deg, #62ff003c ,#45db0043, #00ffcc58 ); */
 
   margin: 0;
@@ -17,7 +30,6 @@ body {
   min-height: 100vh;
   /* Ensures the body is at least the height of the viewport */
 }
-
 
 .text-gradient {
   background: linear-gradient(60deg, orange, red, green, yellow);
@@ -40,7 +52,6 @@ body {
   animation: gradientMove 4s linear infinite;
 }
 
-
 /* loding skeletons */
 
 .skeleton-card {
@@ -52,7 +63,8 @@ body {
   border-radius: 8px;
 }
 
-.skeleton-image, .skeleton-text {
+.skeleton-image,
+.skeleton-text {
   background: linear-gradient(90deg, #f0f0f0 5%, #c3c3c3 40%, #f0f0f0 75%);
   background-size: 200% 100%;
   animation: loading 4s infinite;
@@ -83,4 +95,3 @@ body {
   }
 }
 /* loding skeletons */
-
