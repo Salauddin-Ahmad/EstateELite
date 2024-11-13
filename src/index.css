@@ -32,7 +32,18 @@ body {
 }
 
 .text-gradient {
-  background: linear-gradient(60deg, orange, red, green, yellow);
+  /* background: linear-gradient(60deg, orange, red, green, yellow); */
+
+  /* background: linear-gradient(60deg, #f39c12, #d35400, #27ae60, #f1c40f);
+text-shadow: 0 0 15px rgba(229, 17, 56, 0.3), 0 0 25px rgba(255, 165, 0, 0.7); */
+
+/* background: linear-gradient(60deg, #ff4500, #e60000, #7df542, #ffdb00);
+text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 30px rgba(255, 0, 0, 0.8); */
+
+background: linear-gradient(60deg, #ff9800, #c7170ad6, #2196f3, #b8ff67);
+text-shadow: 0 0 18px rgba(255, 255, 255, 0.3), 0 0 30px rgb(32, 199, 92);
+
+
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
