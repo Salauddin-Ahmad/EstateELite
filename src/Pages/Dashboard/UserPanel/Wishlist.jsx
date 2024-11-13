@@ -25,7 +25,7 @@ const Wishlist = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 ">
         {wishlisted?.map((wishlist) => (
           <div
-            className="card space-y-1 rounded-md mx-3 hover:shadow-xl hover:scale-105 transition-all duration-300 bg-[#ffffff58]"
+            className="card space-y-1 rounded-md mx-3 hover:shadow-xl hover:scale-105 transition-all duration-300 bg-[#ffffff58] mb-6"
             key={wishlist._id}
           >
             <img 
