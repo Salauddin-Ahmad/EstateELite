@@ -11,21 +11,36 @@ const Testimonials = () => {
   const { data: reviews, isLoading, isError } = useReviews();
 
   if (isLoading) {
-    return <div className="flex flex-col gap-4 p-4">
-      {/* Skeleton card 1 */}
-      <div className="skeleton-card">
-        <div className="skeleton-image"></div>
-        <div className="skeleton-text"></div>
-        <div className="skeleton-text short"></div>
+    return <div className="animate-pulse">
+      {/* Top Skeleton Bar */}
+      <div>
+        <div className="h-10 bg-gray-200 my-10 rounded"></div> {/* Skeleton bar representing a header or title */}
       </div>
 
-      {/* Skeleton card 2 */}
-      <div className="skeleton-card">
-        <div className="skeleton-image"></div>
-        <div className="skeleton-text"></div>
-        <div className="skeleton-text short"></div>
+      {/* Main Content Area */}
+      <div className="w-full h-full py-10">
+
+        {/* Content Skeleton Box */}
+        <div className="h-full p-6 rounded-lg my-4 bg-gray-200"></div> {/* Placeholder for content or card */}
+
+        {/* Secondary Skeleton Bar */}
+        <div className="h-10 bg-gray-200 mb-3 rounded"></div> {/* Another skeleton bar for content */}
+
+        {/* Flex for Avatar and Text */}
+        <div className="flex items-center justify-center mb-4">
+          <div className="w-12 h-12 rounded-full mr-4 bg-gray-200"></div> {/* Skeleton circle for avatar */}
+          <div>
+            {/* Name or Title Skeleton */}
+            <div className="h-4 bg-gray-200 rounded"></div> {/* Skeleton for name or title text */}
+          </div>
+        </div>
+
+        {/* More Skeleton Bars */}
+        <div className="h-10 bg-gray-200 rounded"></div> {/* Skeleton bar representing additional content */}
+        <div className="h-4 bg-gray-200 rounded"></div> {/* Skeleton bar for smaller content */}
       </div>
-    </div>;
+    </div>
+
   }
 
   if (isError) {

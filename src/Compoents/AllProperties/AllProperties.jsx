@@ -27,7 +27,7 @@ const AllProperties = () => {
             {properties?.map((property) => (
                 <div
                     key={property?.id}
-                    className="bg-[#ffffff51] backdrop-blur-lg border border-slate-200 shadow-lg rounded-lg overflow-hidden hover:shadow-xl transform transition-all duration-300 hover:scale-105"
+                    className="bg-[#ffffff51] backdrop-blur-lg  shadow-lg rounded-lg overflow-hidden hover:shadow-xl transform transition-all duration-300 hover:scale-105"
                 >
                     <img
                         src={property?.propertyImage}
