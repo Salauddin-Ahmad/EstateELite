@@ -131,6 +131,21 @@ const OfferPage = () => {
       <h1 className="text-2xl font-semibold mb-6">Make an Offer</h1>
       <form onSubmit={handleOfferSubmit}>
         <div className="mb-4">
+        <div className="mb-4">
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            Agent
+          </label>
+          <div className="flex items-center gap-4 border border-gray-300 w-full shadow-sm rounded-l-full rounded-md ">
+            <img
+              className="h-10 w-10 rounded-full "
+              src={property?.propertie?.agentImage}
+              alt=""
+            />
+            <p>{property?.propertie?.agentName}</p>
+          </div>
+        </div>
+        
+
           <label className="block text-sm font-medium text-gray-700">
             Property Title
           </label>
@@ -153,19 +168,7 @@ const OfferPage = () => {
           />
         </div>
 
-        <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-700 mb-1">
-            Agent
-          </label>
-          <div className="flex items-center gap-4 border border-gray-300 w-full shadow-sm rounded-l-full rounded-md ">
-            <img
-              className="h-10 w-10 rounded-full "
-              src={property?.propertie?.agentImage}
-              alt=""
-            />
-            <p>{property?.propertie?.agentName}</p>
-          </div>
-        </div>
+       
 
         <div className="mb-4">
           <label className="block text-sm font-medium text-gray-700">

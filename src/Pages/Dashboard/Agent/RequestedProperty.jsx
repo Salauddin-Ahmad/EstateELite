@@ -16,7 +16,8 @@ const RequestedProperty = () => {
   } = useQuery({
     queryKey: ["requested"],
     queryFn: async () => {
-      const res = await axiosSecure.get(`/propertyBought`);
+      const res = await axiosSecure.get(`/propertyBoughts/${user?.email}`);
+      console.log(res.data);
       return res.data;
     },
     enabled: !!user?.email, // Fetch only when the user's email is available

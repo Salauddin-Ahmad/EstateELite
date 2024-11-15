@@ -1,11 +1,13 @@
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 import useAxiosSecure from "../../../hook/useAxiosSecure";
 import { Link } from "react-router-dom";
 import useAuth from "../../../hook/useAuth";
+import Swal from "sweetalert2";
 
 const Wishlist = () => {
-  const {user} = useAuth()
+  const { user } = useAuth();
   const axiosSecure = useAxiosSecure();
+  const queryClient = useQueryClient();
 
   const { data: wishlisted } = useQuery({
     queryKey: ["wishlist"],
@@ -16,6 +18,21 @@ const Wishlist = () => {
     },
   });
   console.log(wishlisted);
+
+  const handleDelete = async (id) => {
+    try {
+      const response = await axiosSecure.delete(`wishlistdelete/${id}`); // Add await here
+      if (response.status === 200) {
+        Swal.fire("Deleted!", "The item has been removed from your wishlist.", "success");
+        queryClient.invalidateQueries(["wishlist"]); // Invalidate the query to refetch data
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+
+
 
   return (
     <>
@@ -46,7 +63,7 @@ const Wishlist = () => {
           <Link to={`/dashboard/offerPage/${wishlist.propertieId}`}>
            <button className="btn btn-primary">Make an offer</button>
            </Link >
-            <button className="btn bg-red-600 text-white">Remove</button>
+            <button onClick={() => handleDelete(wishlist.propertieId) } className="btn bg-red-600 text-white">Remove</button>
           </div>
            </div>
           </div>
