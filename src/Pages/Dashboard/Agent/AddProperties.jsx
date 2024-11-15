@@ -70,9 +70,9 @@ const AddProperty = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto mt-8 p-6 bg-white rounded-md shadow-md">
-      <h2 className="text-xl font-bold text-center mb-6">Add Property</h2>
-      <form onSubmit={handleSubmit} className="space-y-4">
+    <div className="max-w-lg mx-auto mt-2 p-6 bg-[#ffffff36] rounded-md shadow-md">
+      <h2 className="text-xl font-bold text-center mb-2">Add Property</h2>
+      <form onSubmit={handleSubmit} className="space-y-3">
         <div>
           <label htmlFor="title" className="block font-medium text-gray-700">
             Property Title:
