@@ -67,7 +67,7 @@ const RequestedProperty = () => {
       <h1 className="text-2xl font-bold mb-6">
         Requested Property: {requested.length}
       </h1>
-      <table className="border-collapse border w-full">
+      <table className="border-collapse border w-full  bg-[#c1c1c124]">
         <thead>
           <tr>
             <th className="border p-2">Property Title</th>
@@ -94,17 +94,17 @@ const RequestedProperty = () => {
                 <span>max</span> ${property.offeredMax} min $
                 {property.offeredMin}
               </td>
-              <td className={`border p-2 ${property.status === 'accepted' ? 'text-green-500' : property.status === 'rejected' ? 'text-red-600' : 'text-gray-500'}`}>
+              <td className={`border p-2 ${property.status === 'accepted' ? 'text-green-600' : property.status === 'rejected' ? 'text-red-600' : 'text-gray-500'}`}>
                 {property.status}
               </td>
-              <td className="border p-2">
+              <td className="border text-center ">
                 {property.status === "pending" && (
                   <>
                     <button
                       onClick={() =>
                         handleStatusChange(property.Id, property.propertieId, "accepted")
                       }
-                      className="btn btn-success"
+                      className=" bg-[#4CAF50] px-[13px] py-2 rounded-lg"
                     >
                       Accept
                     </button>
@@ -112,7 +112,7 @@ const RequestedProperty = () => {
                       onClick={() =>
                         handleStatusChange(property.Id, property.propertieId, "rejected")
                       }
-                      className="btn  bg-red-600 "
+                      className="  bg-[#F44336] px-4 py-2 rounded-lg"
                     >
                       Reject
                     </button>
