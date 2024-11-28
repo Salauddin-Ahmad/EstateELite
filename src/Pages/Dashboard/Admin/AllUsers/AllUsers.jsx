@@ -73,6 +73,7 @@ const AllUsers = () => {
   };
 
   const handleMarkAsFraud = (user) => {
+    console.log(user);
   }
   return (
     <div>
@@ -89,18 +90,18 @@ const AllUsers = () => {
               <th className="text-2xl font-bold ">sl.</th>
               <th className="text-2xl font-bold " >Name</th>
               <th className="text-2xl font-bold " >Email</th>
-              <th className="text-2xl font-bold " >User Role</th>
+              <th className="text-2xl font-bold " >Change Role</th>
               <th className="text-2xl font-bold " >Action</th>
             </tr>
           </thead>
-          <tbody>
+          {/* <tbody>
             {users.map((user, index) => (
               <tr key={user._id}>
                 <th>{index + 1}</th>
                 <td>{user.name}</td>
                 <td>{user.email}</td>
                 <td>
-                  {user.role === "admin" ? (
+                  {user.role === "agent" ? (
                     <>
                       <button
                         onClick={() => handleMarkAsFraud(user)}
@@ -109,8 +110,8 @@ const AllUsers = () => {
                         Mark as Fraud
                       </button>
                     </>
-                  ) : user.role === "agent" ? (
-                    "Agent"
+                  ) : user.role === "admin" ? (
+                    "Admin"
                   ) : (
                     <>
                       <button
@@ -138,7 +139,52 @@ const AllUsers = () => {
                 </td>
               </tr>
             ))}
+          </tbody> */}
+          <tbody>
+            {users.map((user, index) => (
+              <tr key={user._id}>
+                <th className="text-center">{index + 1}</th>
+                <td className="text-center">{user.name}</td>
+                <td className="text-center">{user.email}</td>
+                <td className="text-center">
+                  {user.role === "agent" ? (
+                    <button
+                      onClick={() => handleMarkAsFraud(user)}
+                      className=" ml-[106px] flex items-center justify-center bg-[#e05353]  hover:bg-red-600 text-black font-medium px-4 py-2 rounded-lg shadow-md transition duration-300"
+                    >
+                      Mark as Fraud
+                    </button>
+                  ) : user.role === "admin" ? (
+                    <span className=" items-center gap-2 bg-[#c3aa3e] text-white font-medium px-4 py-2 rounded-lg shadow-lg transition duration-300">Admin</span>
+                  ) : (
+                    <div className="flex gap-2 justify-center">
+                      <button
+                        onClick={() => handleMakeAdmin(user)}
+                        className="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-medium px-4 py-2 rounded-lg shadow-md transition duration-300"
+                      >
+                        <FaUsers className="text-lg" /> Make Admin
+                      </button>
+                      <button
+                        onClick={() => handleMakeAgent(user)}
+                        className="flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white font-medium px-4 py-2 rounded-lg shadow-md transition duration-300"
+                      >
+                        <FaUserTie className="text-lg" /> Make Agent
+                      </button>
+                    </div>
+                  )}
+                </td>
+                <td className="text-center">
+                  <button
+                    onClick={() => handleDeleteUser(user)}
+                    className="flex items-center justify-center bg-red-500 hover:bg-red-600 text-white font-medium px-4 py-2 rounded-lg shadow-md transition duration-300"
+                  >
+                    <FaTrashAlt className="text-lg" />
+                  </button>
+                </td>
+              </tr>
+            ))}
           </tbody>
+
         </table>
       </div>
     </div>
