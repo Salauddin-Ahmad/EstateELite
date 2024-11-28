@@ -56,9 +56,10 @@ const Sliders = () => {
             }}
           />
         </SwiperSlide>
-        <SwiperSlide>
+        {/* <SwiperSlide>
           <img
-            src="https://i.ibb.co.com/sF2fPWx/photo-1721149122657-7b5440f39160.jpg"
+            src="https://i.ibb.co.com/sF2f
+            +-PWx/photo-1721149122657-7b5440f39160.jpg"
             alt=""
             style={{
               width: "100%",
@@ -67,7 +68,7 @@ const Sliders = () => {
               borderRadius: "2px"
             }}
           />
-        </SwiperSlide>
+        </SwiperSlide> */}
         <SwiperSlide>
           <img
             src="https://i.postimg.cc/hjdTDr7y/ronnie-george-9g-Gv-NWBe-Oq4-unsplash.jpg"
