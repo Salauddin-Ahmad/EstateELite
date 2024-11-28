@@ -76,118 +76,203 @@ const AllUsers = () => {
     console.log(user);
   }
   return (
-    <div>
-      <div className="flex justify-evenly my-4">
-        <h2 className="text-3xl">All Users</h2>
-        <h2 className="text-3xl">Total Users: {users.length}</h2>
-      </div>
+    // <div>
+    //   <div className="flex justify-evenly my-4">
+    //     <h2 className="text-3xl">All Users</h2>
+    //     <h2 className="text-3xl">Total Users: {users.length}</h2>
+    //   </div>
 
-      <div className="overflow-x-auto">
-        <table className="table table-zebra w-full">
-          {/* head */}
-          <thead>
-            <tr>
-              <th className="text-2xl font-bold ">sl.</th>
-              <th className="text-2xl font-bold " >Name</th>
-              <th className="text-2xl font-bold " >Email</th>
-              <th className="text-2xl font-bold " >Change Role</th>
-              <th className="text-2xl font-bold " >Action</th>
-            </tr>
-          </thead>
-          {/* <tbody>
-            {users.map((user, index) => (
-              <tr key={user._id}>
-                <th>{index + 1}</th>
-                <td>{user.name}</td>
-                <td>{user.email}</td>
-                <td>
-                  {user.role === "agent" ? (
-                    <>
-                      <button
-                        onClick={() => handleMarkAsFraud(user)}
-                        className="btn btn-lg bg-yellow-400 ml-2"
-                      >
-                        Mark as Fraud
-                      </button>
-                    </>
-                  ) : user.role === "admin" ? (
-                    "Admin"
-                  ) : (
-                    <>
-                      <button
-                        onClick={() => handleMakeAdmin(user)}
-                        className="btn btn-lg bg-green-500 mr-2"
-                      >
-                        <FaUsers className="text-white font-normal text-2xl" /> Admin
-                      </button>
-                      <button
-                        onClick={() => handleMakeAgent(user)}
-                        className="btn btn-lg bg-blue-500"
-                      >
-                        <FaUserTie className="text-white font-normal text-2xl" /> Agent
-                      </button>
-                    </>
-                  )}
-                </td>
-                <td>
-                  <button
-                    onClick={() => handleDeleteUser(user)}
-                    className="btn btn-lg bg-red-500"
-                  >
-                    <FaTrashAlt className="text-white font-normal text-xs" />
-                  </button>
-                </td>
-              </tr>
-            ))}
-          </tbody> */}
-          <tbody>
-            {users.map((user, index) => (
-              <tr key={user._id}>
-                <th className="text-center">{index + 1}</th>
-                <td className="text-center">{user.name}</td>
-                <td className="text-center">{user.email}</td>
-                <td className="text-center">
-                  {user.role === "agent" ? (
-                    <button
-                      onClick={() => handleMarkAsFraud(user)}
-                      className=" ml-[106px] flex items-center justify-center bg-[#e05353]  hover:bg-red-600 text-black font-medium px-4 py-2 rounded-lg shadow-md transition duration-300"
-                    >
-                      Mark as Fraud
-                    </button>
-                  ) : user.role === "admin" ? (
-                    <span className=" items-center gap-2 bg-[#c3aa3e] text-white font-medium px-4 py-2 rounded-lg shadow-lg transition duration-300">Admin</span>
-                  ) : (
-                    <div className="flex gap-2 justify-center">
-                      <button
-                        onClick={() => handleMakeAdmin(user)}
-                        className="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-medium px-4 py-2 rounded-lg shadow-md transition duration-300"
-                      >
-                        <FaUsers className="text-lg" /> Make Admin
-                      </button>
-                      <button
-                        onClick={() => handleMakeAgent(user)}
-                        className="flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white font-medium px-4 py-2 rounded-lg shadow-md transition duration-300"
-                      >
-                        <FaUserTie className="text-lg" /> Make Agent
-                      </button>
-                    </div>
-                  )}
-                </td>
-                <td className="text-center">
-                  <button
-                    onClick={() => handleDeleteUser(user)}
-                    className="flex items-center justify-center bg-red-500 hover:bg-red-600 text-white font-medium px-4 py-2 rounded-lg shadow-md transition duration-300"
-                  >
-                    <FaTrashAlt className="text-lg" />
-                  </button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
+    //   <div className="overflow-x-auto">
+    //     <table className="table table-zebra w-full">
+    //       {/* head */}
+    //       <thead>
+    //         <tr>
+    //           <th className="text-2xl font-bold ">sl.</th>
+    //           <th className="text-2xl font-bold " >Name</th>
+    //           <th className="text-2xl font-bold " >Email</th>
+    //           <th className="text-2xl font-bold " >Change Role</th>
+    //           <th className="text-2xl font-bold " >Action</th>
+    //         </tr>
+    //       </thead>
+    //       {/* <tbody>
+    //         {users.map((user, index) => (
+    //           <tr key={user._id}>
+    //             <th>{index + 1}</th>
+    //             <td>{user.name}</td>
+    //             <td>{user.email}</td>
+    //             <td>
+    //               {user.role === "agent" ? (
+    //                 <>
+    //                   <button
+    //                     onClick={() => handleMarkAsFraud(user)}
+    //                     className="btn btn-lg bg-yellow-400 ml-2"
+    //                   >
+    //                     Mark as Fraud
+    //                   </button>
+    //                 </>
+    //               ) : user.role === "admin" ? (
+    //                 "Admin"
+    //               ) : (
+    //                 <>
+    //                   <button
+    //                     onClick={() => handleMakeAdmin(user)}
+    //                     className="btn btn-lg bg-green-500 mr-2"
+    //                   >
+    //                     <FaUsers className="text-white font-normal text-2xl" /> Admin
+    //                   </button>
+    //                   <button
+    //                     onClick={() => handleMakeAgent(user)}
+    //                     className="btn btn-lg bg-blue-500"
+    //                   >
+    //                     <FaUserTie className="text-white font-normal text-2xl" /> Agent
+    //                   </button>
+    //                 </>
+    //               )}
+    //             </td>
+    //             <td>
+    //               <button
+    //                 onClick={() => handleDeleteUser(user)}
+    //                 className="btn btn-lg bg-red-500"
+    //               >
+    //                 <FaTrashAlt className="text-white font-normal text-xs" />
+    //               </button>
+    //             </td>
+    //           </tr>
+    //         ))}
+    //       </tbody> */}
+    //       <tbody>
+    //         {users.map((user, index) => (
+    //           <tr key={user._id}>
+    //             <th className="text-center">{index + 1}</th>
+    //             <td className="text-center">{user.name}</td>
+    //             <td className="text-center">{user.email}</td>
+    //             <td className="text-center">
+    //               {user.role === "agent" ? (
+    //                 <button
+    //                   onClick={() => handleMarkAsFraud(user)}
+    //                   className=" ml-[106px] flex items-center justify-center bg-[#e05353]  hover:bg-red-600 text-black font-medium px-4 py-2 rounded-lg shadow-md transition duration-300"
+    //                 >
+    //                   Mark as Fraud
+    //                 </button>
+    //               ) : user.role === "admin" ? (
+    //                 <span className=" items-center gap-2 bg-[#c3aa3e] text-white font-medium px-4 py-2 rounded-lg shadow-lg transition duration-300">Admin</span>
+    //               ) : (
+    //                 <div className="flex gap-2 justify-center">
+    //                   <button
+    //                     onClick={() => handleMakeAdmin(user)}
+    //                     className="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-medium px-4 py-2 rounded-lg shadow-md transition duration-300"
+    //                   >
+    //                     <FaUsers className="text-lg" /> Make Admin
+    //                   </button>
+    //                   <button
+    //                     onClick={() => handleMakeAgent(user)}
+    //                     className="flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white font-medium px-4 py-2 rounded-lg shadow-md transition duration-300"
+    //                   >
+    //                     <FaUserTie className="text-lg" /> Make Agent
+    //                   </button>
+    //                 </div>
+    //               )}
+    //             </td>
+    //             <td className="text-center">
+    //               <button
+    //                 onClick={() => handleDeleteUser(user)}
+    //                 className="flex items-center justify-center bg-red-500 hover:bg-red-600 text-white font-medium px-4 py-2 rounded-lg shadow-md transition duration-300"
+    //               >
+    //                 <FaTrashAlt className="text-lg" />
+    //               </button>
+    //             </td>
+    //           </tr>
+    //         ))}
+    //       </tbody>
 
-        </table>
-      </div>
-    </div>
+    //     </table>
+    //   </div>
+    // </div>
+<div>
+  <div className="flex justify-evenly my-4">
+    <h2 className="text-3xl">All Users</h2>
+    <h2 className="text-3xl">Total Users: {users.length}</h2>
+  </div>
+
+  <div className="overflow-x-auto">
+    <table className="table table-zebra w-full">
+      {/* Table Header */}
+      <thead>
+        <tr>
+          <th className="text-2xl font-bold">SL.</th>
+          <th className="text-2xl font-bold">Name</th>
+          <th className="text-2xl font-bold">Email</th>
+          <th className="text-2xl font-bold">User Role</th>
+          <th className="text-2xl font-bold">Change Role</th>
+          <th className="text-2xl font-bold">Action</th>
+        </tr>
+      </thead>
+
+      {/* Table Body */}
+      <tbody>
+        {users.map((user, index) => (
+          <tr key={user._id}>
+            {/* SL No */}
+            <th className="text-center">{index + 1}</th>
+
+            {/* User Name */}
+            <td className="text-center">{user.name}</td>
+
+            {/* User Email */}
+            <td className="text-center">{user.email}</td>
+
+            {/* Current User Role */}
+            <td className="text-center">
+              {user.role === "agent" ? (
+                <span className="bg-blue-100 text-blue-600 font-medium px-4 py-2 rounded-lg shadow-md">
+                  Agent
+                </span>
+              ) : user.role === "admin" ? (
+                <span className="bg-yellow-100 text-yellow-600 font-medium px-4 py-2 rounded-lg shadow-md">
+                  Admin
+                </span>
+              ) : (
+                <span className="bg-gray-100 text-gray-600 font-medium px-4 py-2 rounded-lg shadow-md">
+                  User
+                </span>
+              )}
+            </td>
+
+            {/* Change Role Buttons */}
+            <td className="text-center">
+              <div className="flex gap-2 justify-center">
+                <button
+                  onClick={() => handleMakeAdmin(user)}
+                  className="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-medium px-4 py-2 rounded-lg shadow-md transition duration-300"
+                >
+                  <FaUsers className="text-lg" /> Make Admin
+                </button>
+                <button
+                  onClick={() => handleMakeAgent(user)}
+                  className="flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white font-medium px-4 py-2 rounded-lg shadow-md transition duration-300"
+                >
+                  <FaUserTie className="text-lg" /> Make Agent
+                </button>
+              </div>
+            </td>
+
+            {/* Delete User */}
+            <td className="text-center">
+              <button
+                onClick={() => handleDeleteUser(user)}
+                className="flex items-center justify-center bg-red-500 hover:bg-red-600 text-white font-medium px-4 py-2 rounded-lg shadow-md transition duration-300"
+              >
+                <FaTrashAlt className="text-lg" />
+              </button>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
   );
 };
 
