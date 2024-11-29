@@ -188,79 +188,84 @@ const AllUsers = () => {
     //     </table>
     //   </div>
     // </div>
-<div>
-  <div className="flex justify-evenly my-4">
-    <h2 className="text-3xl">All Users</h2>
-    <h2 className="text-3xl">Total Users: {users.length}</h2>
+<div className="p-6">
+  {/* Header Section */}
+  <div className="flex flex-col md:flex-row justify-between items-center my-6">
+    <h2 className="text-3xl font-bold">All Users</h2>
+    <h2 className="text-2xl font-medium">Total Users: {users.length}</h2>
   </div>
 
+  {/* Table Section */}
   <div className="overflow-x-auto">
-    <table className="table table-zebra w-full">
-      {/* Table Header */}
-      <thead>
+    <table className="table-auto w-full text-center border-collapse border border-gray-300 shadow-lg">
+      {/* Table Head */}
+      <thead className="bg-gray-200">
         <tr>
-          <th className="text-2xl font-bold">SL.</th>
-          <th className="text-2xl font-bold">Name</th>
-          <th className="text-2xl font-bold">Email</th>
-          <th className="text-2xl font-bold">User Role</th>
-          <th className="text-2xl font-bold">Change Role</th>
-          <th className="text-2xl font-bold">Action</th>
+          <th className="px-4 py-3 text-lg font-semibold border border-gray-300">Sl.</th>
+          <th className="px-4 py-3 text-lg font-semibold border border-gray-300">Name</th>
+          <th className="px-4 py-3 text-lg font-semibold border border-gray-300">Email</th>
+          <th className="px-4 py-3 text-lg font-semibold border border-gray-300">Current Role</th>
+          <th className="px-4 py-3 text-lg font-semibold border border-gray-300">Change Role</th>
+          <th className="px-4 py-3 text-lg font-semibold border border-gray-300">Action</th>
         </tr>
       </thead>
 
       {/* Table Body */}
       <tbody>
         {users.map((user, index) => (
-          <tr key={user._id}>
-            {/* SL No */}
-            <th className="text-center">{index + 1}</th>
-
-            {/* User Name */}
-            <td className="text-center">{user.name}</td>
-
-            {/* User Email */}
-            <td className="text-center">{user.email}</td>
-
-            {/* Current User Role */}
-            <td className="text-center">
-              {user.role === "agent" ? (
-                <span className="bg-blue-100 text-blue-600 font-medium px-4 py-2 rounded-lg shadow-md">
-                  Agent
-                </span>
-              ) : user.role === "admin" ? (
-                <span className="bg-yellow-100 text-yellow-600 font-medium px-4 py-2 rounded-lg shadow-md">
+          <tr key={user._id} className="hover:bg-gray-100">
+            <td className="px-4 py-3 border border-gray-300">{index + 1}</td>
+            <td className="px-4 py-3 border border-gray-300">{user.name}</td>
+            <td className="px-4 py-3 border border-gray-300">{user.email}</td>
+            {/* Role Field */}
+            <td className="px-4 py-3 border border-gray-300 font-medium">
+              {user.role === "admin" ? (
+                <span className="bg-yellow-500 text-white px-4 py-2 rounded-lg shadow-lg">
                   Admin
                 </span>
+              ) : user.role === "agent" ? (
+                <span className="bg-blue-500 text-white px-4 py-2 rounded-lg shadow-lg">
+                  Agent
+                </span>
               ) : (
-                <span className="bg-gray-100 text-gray-600 font-medium px-4 py-2 rounded-lg shadow-md">
+                <span className="bg-gray-300 text-black px-4 py-2 rounded-lg shadow-lg">
                   User
                 </span>
               )}
             </td>
-
-            {/* Change Role Buttons */}
-            <td className="text-center">
-              <div className="flex gap-2 justify-center">
+            {/* Role Change Buttons */}
+            <td className="px-4 py-3 border border-gray-300">
+              {user.role === "agent" ? (
                 <button
-                  onClick={() => handleMakeAdmin(user)}
-                  className="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-medium px-4 py-2 rounded-lg shadow-md transition duration-300"
+                  onClick={() => handleMarkAsFraud(user)}
+                  className="bg-red-500 hover:bg-red-600 text-white font-medium px-4 py-2 rounded-lg shadow-md transition duration-300"
                 >
-                  <FaUsers className="text-lg" /> Make Admin
+                  Mark as Fraud
                 </button>
-                <button
-                  onClick={() => handleMakeAgent(user)}
-                  className="flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white font-medium px-4 py-2 rounded-lg shadow-md transition duration-300"
-                >
-                  <FaUserTie className="text-lg" /> Make Agent
-                </button>
-              </div>
+              ) : user.role === "admin" ? (
+                <span className="text-gray-500">No Actions</span>
+              ) : (
+                <div className="flex justify-center gap-4">
+                  <button
+                    onClick={() => handleMakeAdmin(user)}
+                    className="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-medium px-4 py-2 rounded-lg shadow-md transition duration-300"
+                  >
+                    <FaUsers className="text-lg" /> Make Admin
+                  </button>
+                  <button
+                    onClick={() => handleMakeAgent(user)}
+                    className="flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white font-medium px-4 py-2 rounded-lg shadow-md transition duration-300"
+                  >
+                    <FaUserTie className="text-lg" /> Make Agent
+                  </button>
+                </div>
+              )}
             </td>
-
-            {/* Delete User */}
-            <td className="text-center">
+            {/* Delete Button */}
+            <td className="px-4 py-3 border border-gray-300">
               <button
                 onClick={() => handleDeleteUser(user)}
-                className="flex items-center justify-center bg-red-500 hover:bg-red-600 text-white font-medium px-4 py-2 rounded-lg shadow-md transition duration-300"
+                className="bg-red-500 hover:bg-red-600 text-white font-medium px-4 py-2 rounded-lg shadow-md transition duration-300 flex items-center justify-center"
               >
                 <FaTrashAlt className="text-lg" />
               </button>
@@ -271,6 +276,7 @@ const AllUsers = () => {
     </table>
   </div>
 </div>
+
 
 
   );
