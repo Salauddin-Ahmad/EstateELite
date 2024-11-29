@@ -73,8 +73,42 @@ const AllUsers = () => {
   };
 
   const handleMarkAsFraud = (user) => {
-    console.log(user);
-  }
+    Swal.fire({
+      title: "Are you sure?",
+      text: "Marking this agent as fraud will remove all their properties!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, mark as fraud!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        axiosSecure
+          .put(`/markfraud/${user._id}`) // Adjusted API endpoint method and path
+          .then((res) => {
+            if (res.data.success) {
+              refetch(); // Re-fetch user data to update UI
+              Swal.fire({
+                title: "Marked as Fraud!",
+                text: "The agent has been marked as fraud, and their properties have been removed.",
+                icon: "success",
+              });
+            }
+          })
+          .catch((error) => {
+            Swal.fire({
+              title: "Error!",
+              text: "Something went wrong while marking as fraud.",
+              icon: "error",
+            });
+            console.error(error);
+          });
+      }
+    });
+  };
+  
+
+  
   return (
     // <div>
     //   <div className="flex justify-evenly my-4">
